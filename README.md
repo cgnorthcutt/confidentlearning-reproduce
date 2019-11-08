@@ -9,3 +9,8 @@ Because GitHub limits filesizes to 100MB, I cannot upload trained ResNet-50 mode
 * `cifar10_noisy_labels` -- folder containing all the noisy labels settings
 * `experiments.bash` -- examples of the commands run to generate results
 * `cifar10_train_crossval.py` -- training script to perform all cifar-10 experiments (get cross-validated probabilities, evaluate on test set, train on a masked input to remove noisy examples)
+
+
+## License
+
+Copyright (c) 2017-2020 Curtis Northcutt. Released under the MIT License. See [LICENSE](https://github.com/cgnorthcutt/cleanlab/blob/master/LICENSE) for details.

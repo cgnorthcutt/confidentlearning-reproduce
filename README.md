@@ -1,7 +1,7 @@
 # confidentlearning-reproduce
 Experimental data for reproducibility of CIFAR-10 experimental results in the [confident learning paper](https://arxiv.org/abs/1911.00068).
 
-This repo depends on the [cleanlab](https://pypi.org/project/cleanlab/) Python package to implement confident learning.
+This repo depends on the [**`cleanlab`**](https://pypi.org/project/cleanlab/) Python package to implement confident learning.
 
 Because GitHub limits filesizes to 100MB, I cannot upload trained ResNet-50 models (180MB each), but for every setting, I upload an `out` log file with the accuracy at every batch and test accuracy at every epoch. The file naming conventions are as follows
 

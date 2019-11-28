@@ -20,7 +20,7 @@ parser.add_argument('--lr', type = float, default = 0.001)
 parser.add_argument('--result_dir', type = str, help = 'dir to save result txt files', default = 'results/')
 parser.add_argument('--noise_rate', type = float, help = 'corruption rate, should be less than 1', default = 0.2)
 parser.add_argument('--forget_rate', type = float, help = 'forget rate', default = None)
-parser.add_argument('--noise_type', type = str, help='[pairflip, symmetric]', default='pairflip')
+parser.add_argument('--noise_type', type = str, help='[pairflip, symmetric, from_file]', default='from_file')
 parser.add_argument('--num_gradual', type = int, default = 10, help='how many epochs for linear drop rate, can be 5, 10, 15. This parameter is equal to Tk for R(T) in Co-teaching paper.')
 parser.add_argument('--exponent', type = float, default = 1, help='exponent of the forget rate, can be 0.5, 1, 2. This parameter is equal to c in Tc for R(T) in Co-teaching paper.')
 parser.add_argument('--top_bn', action='store_true')
@@ -31,6 +31,7 @@ parser.add_argument('--print_freq', type=int, default=50)
 parser.add_argument('--num_workers', type=int, default=4, help='how many subprocesses to use for data loading')
 parser.add_argument('--num_iter_per_epoch', type=int, default=400)
 parser.add_argument('--epoch_decay_start', type=int, default=80)
+parser.add_argument('--fn', type=str, default='~')
 
 args = parser.parse_args()
 
@@ -76,7 +77,8 @@ if args.dataset=='cifar10':
                                 train=True, 
                                 transform=transforms.ToTensor(),
                                 noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
+                                noise_rate=args.noise_rate,
+                                fn=args.fn,  # path to noisy labels
                            )
     
     test_dataset = CIFAR10(root='./data/',
@@ -205,7 +207,7 @@ def train(train_loader,epoch, model1, optimizer1, model2, optimizer2):
         optimizer2.step()
         if (i+1) % args.print_freq == 0:
             print ('Epoch [%d/%d], Iter [%d/%d] Training Accuracy1: %.4F, Training Accuracy2: %.4f, Loss1: %.4f, Loss2: %.4f, Pure Ratio1: %.4f, Pure Ratio2 %.4f' 
-                  %(epoch+1, args.n_epoch, i+1, len(train_dataset)//batch_size, prec1, prec2, loss_1.data[0], loss_2.data[0], np.sum(pure_ratio_1_list)/len(pure_ratio_1_list), np.sum(pure_ratio_2_list)/len(pure_ratio_2_list)))
+                  %(epoch+1, args.n_epoch, i+1, len(train_dataset)//batch_size, prec1, prec2, loss_1.data.item(), loss_2.data.item(), np.sum(pure_ratio_1_list)/len(pure_ratio_1_list), np.sum(pure_ratio_2_list)/len(pure_ratio_2_list)))
 
     train_acc1=float(train_correct)/float(train_total)
     train_acc2=float(train_correct2)/float(train_total2)

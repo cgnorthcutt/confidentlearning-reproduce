@@ -24,7 +24,7 @@ parser.add_argument('--lr', type = float, default = 0.001)
 parser.add_argument('--result_dir', type = str, help = 'dir to save result txt files', default = 'results/')
 parser.add_argument('--noise_rate', type = float, help = 'corruption rate, should be less than 1', default = 0.2)
 parser.add_argument('--forget_rate', type = float, help = 'forget rate', default = None)
-parser.add_argument('--noise_type', type = str, help='[pairflip, symmetric]', default='symmetric')
+parser.add_argument('--noise_type', type = str, help='[pairflip, symmetric, from_file]', default='from_file')
 parser.add_argument('--num_gradual', type = int, default = 10, help='how many epochs for linear drop rate. This parameter is equal to Ek for lambda(E) in the paper.')
 parser.add_argument('--dataset', type = str, help = 'mnist, cifar10, cifar100, or imagenet_tiny', default = 'mnist')
 parser.add_argument('--n_epoch', type=int, default=200)
@@ -35,6 +35,7 @@ parser.add_argument('--num_workers', type=int, default=4, help='how many subproc
 parser.add_argument('--epoch_decay_start', type=int, default=80)
 parser.add_argument('--model_type', type = str, help='[coteaching, coteaching_plus]', default='coteaching_plus')
 parser.add_argument('--fr_type', type = str, help='forget rate type', default='type_1')
+parser.add_argument('--fn', type=str, default='~')
 
 args = parser.parse_args()
 
@@ -78,7 +79,8 @@ if args.dataset=='cifar10':
                                 train=True, 
                                 transform=transforms.ToTensor(),
                                 noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
+                                noise_rate=args.noise_rate,
+                                fn=args.fn,  # path to noisy labels
                                 )
     
     test_dataset = CIFAR10(root='./data/',

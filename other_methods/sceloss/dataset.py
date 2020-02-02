@@ -2,11 +2,20 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import numpy as np
 
-np.random.seed(15)
+np.random.seed(1)
 
 
 class cifar10Nosiy(datasets.CIFAR10):
-    def __init__(self, root, train=True, transform=None, target_transform=None, download=False, nosiy_rate=0.0):
+    def __init__(
+        self,
+        root,
+        train=True,
+        transform=None,
+        target_transform=None,
+        download=True,
+        nosiy_rate=0.4,
+        filename=None,  # filename where noisy labels are stored
+    ):
         super(cifar10Nosiy, self).__init__(root, transform=transform, target_transform=target_transform)
         if nosiy_rate > 0:
             n_samples = len(self.targets)
@@ -86,19 +95,23 @@ class cifar100Nosiy(datasets.CIFAR100):
 
 
 class cifarDataset():
-    def __init__(self,
-                 batchSize=128,
-                 dataPath='data/',
-                 numOfWorkers=4,
-                 is_cifar100=False,
-                 cutout_length=16,
-                 noise_rate=0.4):
+    def __init__(
+        self,
+        batchSize=128,
+        dataPath='data/',
+        numOfWorkers=4,
+        is_cifar100=False,
+        cutout_length=16,
+        noise_rate=0.4,
+        filename=None,
+    ):
         self.batchSize = batchSize
         self.dataPath = dataPath
         self.numOfWorkers = numOfWorkers
         self.cutout_length = cutout_length
         self.noise_rate = noise_rate
         self.is_cifar100 = is_cifar100
+        self.filename = filename
         self.data_loaders = self.loadData()
         return
 
@@ -120,28 +133,71 @@ class cifarDataset():
             transforms.Normalize(CIFAR_MEAN, CIFAR_STD)])
 
         if self.is_cifar100:
-            train_dataset = cifar100Nosiy(root=self.dataPath,
-                                          train=True,
-                                          transform=train_transform,
-                                          download=True,
-                                          nosiy_rate=self.noise_rate)
+            train_dataset = cifar100Nosiy(
+                root=self.dataPath,
+                train=True,
+                transform=train_transform,
+                download=True,
+                nosiy_rate=self.noise_rate,
+            )
 
             test_dataset = datasets.CIFAR100(root=self.dataPath,
                                              train=False,
                                              transform=test_transform,
                                              download=True)
 
-        else:
-            train_dataset = cifar10Nosiy(root=self.dataPath,
-                                         train=True,
-                                         transform=train_transform,
-                                         download=True,
-                                         nosiy_rate=self.noise_rate)
+        else:  # CIFAR-10
+            if self.filename is None:
+                # Original code
+                train_dataset = cifar10Nosiy(
+                    root=self.dataPath,
+                    train=True,
+                    transform=train_transform,
+                    download=True,
+                    nosiy_rate=self.noise_rate,
+                )
+            else:  # Curtis added code to fetch noisy labels from file.
+                import json
+                train_dataset = datasets.ImageFolder(
+                    "/datasets/datasets/cifar10/cifar10/train/",
+                    transform=train_transform,
+                )
 
-            test_dataset = datasets.CIFAR10(root=self.dataPath,
-                                            train=False,
-                                            transform=test_transform,
-                                            download=True)
+#                 true_labels = np.asarray([label for _, label in train_dataset.imgs])
+
+                # use noisy training labels instead of dataset labels
+                with open(self.filename, 'r') as rf:
+                    train_labels_dict = json.load(rf)
+                train_dataset.imgs = [(fn, train_labels_dict[fn]) for fn, _ in train_dataset.imgs]
+                train_dataset.samples = train_dataset.imgs
+
+#                 train_loader = torch.utils.data.DataLoader(
+#                     train_dataset, batch_size=50000, shuffle=False,
+#                     num_workers=10, pin_memory=True, sampler=None,
+#                 )
+
+#                 for train_data, train_noisy_labels in train_loader:
+#                     pass
+#                 train_data = (train_data.numpy() * 255).astype(np.uint8)
+#                 train_data = train_data.transpose((0, 2, 3, 1))  # convert to HWC
+#                 train_noisy_labels = train_noisy_labels.numpy()
+
+#             #     print(type(train_data), type(train_noisy_labels), train_data.shape, train_noisy_labels.shape)
+
+#                 actual_noise = sum(true_labels != train_noisy_labels) / float(len(true_labels))
+#                 assert actual_noise > 0.0
+#                 print('Actual noise %.2f' % actual_noise)
+
+#             test_dataset = datasets.CIFAR10(root=self.dataPath,
+#                                             train=False,
+#                                             transform=test_transform,
+#                                             download=True)
+    
+            
+            test_dataset = datasets.ImageFolder(
+                "/datasets/datasets/cifar10/cifar10/test/",
+                transform=test_transform,
+            )
 
         data_loaders = {}
 

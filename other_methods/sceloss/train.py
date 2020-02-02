@@ -25,6 +25,7 @@ parser.add_argument('--nr', type=float, default=0.4, help='noise_rate')
 parser.add_argument('--loss', type=str, default='SCE', help='SCE, CE')
 parser.add_argument('--version', type=str, default='SCE0.0', help='Version')
 parser.add_argument('--train_cifar100', action='store_true', default=False)
+parser.add_argument('--fn', default=None, type=str)
 
 args = parser.parse_args()
 GLOBAL_STEP, EVAL_STEP, EVAL_BEST_ACC, EVAL_BEST_ACC_TOP5 = 0, 0, 0, 0
@@ -164,7 +165,9 @@ def train():
                            dataPath=args.data_path,
                            numOfWorkers=args.data_nums_workers,
                            noise_rate=args.nr,
-                           is_cifar100=args.train_cifar100)
+                           is_cifar100=args.train_cifar100,
+                           filename=args.fn,
+                          )
     dataLoader = dataset.getDataLoader()
 
     if args.train_cifar100:

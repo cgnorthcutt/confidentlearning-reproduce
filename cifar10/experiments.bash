@@ -1,3 +1,8 @@
+These experiments are used to generate the cross-validated out-of-sample
+predicted probabilities for the entire CIFAR-10 train set.
+
+
+
 PIKEVILLE
 
 

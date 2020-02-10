@@ -1,0 +1,1303 @@
+Files already downloaded and verified
+(50000, 32, 32, 3) <type 'numpy.ndarray'> uint8 (32, 32, 3) <type 'numpy.ndarray'> uint8
+('Train size:', 15621)
+Actual noise 0.22
+(15621, 32, 32, 3) <type 'numpy.ndarray'> uint8 (32, 32, 3) <type 'numpy.ndarray'> uint8
+Files already downloaded and verified
+loading dataset...
+building model...
+<bound method CNN.parameters of CNN(
+  (c1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c4): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c7): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
+  (c8): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1))
+  (c9): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1))
+  (l_c1): Linear(in_features=128, out_features=10, bias=True)
+  (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn8): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn9): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)>
+<bound method CNN.parameters of CNN(
+  (c1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c4): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c5): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (c7): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
+  (c8): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1))
+  (c9): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1))
+  (l_c1): Linear(in_features=128, out_features=10, bias=True)
+  (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn7): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn8): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn9): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)>
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [1/250] Test Accuracy on the 10000 test images: Model1 10.0060 % Model2 9.9860 % Pure Ratio1 0.0000 % Pure Ratio2 0.0000 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+/home/cgn/miniconda3/envs/py2/lib/python2.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+Epoch [2/250], Iter [50/122] Training Accuracy1: 42.9688, Training Accuracy2: 33.5938, Loss1: 0.0113, Loss2: 0.0119, Pure Ratio1: 9.9680, Pure Ratio2 10.0640
+Epoch [2/250], Iter [100/122] Training Accuracy1: 48.4375, Training Accuracy2: 47.6562, Loss1: 0.0090, Loss2: 0.0095, Pure Ratio1: 9.8560, Pure Ratio2 9.9280
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [2/250] Test Accuracy on the 10000 test images: Model1 18.3994 % Model2 21.7748 %, Pure Ratio 1 10.0197 %, Pure Ratio 2 10.0918 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [3/250], Iter [50/122] Training Accuracy1: 60.9375, Training Accuracy2: 65.6250, Loss1: 0.0070, Loss2: 0.0070, Pure Ratio1: 10.6721, Pure Ratio2 10.6557
+Epoch [3/250], Iter [100/122] Training Accuracy1: 70.3125, Training Accuracy2: 66.4062, Loss1: 0.0055, Loss2: 0.0064, Pure Ratio1: 10.2787, Pure Ratio2 10.2541
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [3/250] Test Accuracy on the 10000 test images: Model1 22.5060 % Model2 21.6446 %, Pure Ratio 1 10.0779 %, Pure Ratio 2 10.0443 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [4/250], Iter [50/122] Training Accuracy1: 62.5000, Training Accuracy2: 65.6250, Loss1: 0.0063, Loss2: 0.0060, Pure Ratio1: 9.8655, Pure Ratio2 9.8151
+Epoch [4/250], Iter [100/122] Training Accuracy1: 67.1875, Training Accuracy2: 63.2812, Loss1: 0.0053, Loss2: 0.0054, Pure Ratio1: 9.9832, Pure Ratio2 9.9328
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [4/250] Test Accuracy on the 10000 test images: Model1 26.3221 % Model2 22.2456 %, Pure Ratio 1 10.0978 %, Pure Ratio 2 10.0496 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [5/250], Iter [50/122] Training Accuracy1: 72.6562, Training Accuracy2: 72.6562, Loss1: 0.0042, Loss2: 0.0041, Pure Ratio1: 10.0517, Pure Ratio2 10.1379
+Epoch [5/250], Iter [100/122] Training Accuracy1: 72.6562, Training Accuracy2: 74.2188, Loss1: 0.0043, Loss2: 0.0039, Pure Ratio1: 9.9914, Pure Ratio2 10.0086
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [5/250] Test Accuracy on the 10000 test images: Model1 29.2067 % Model2 24.2288 %, Pure Ratio 1 10.0127 %, Pure Ratio 2 10.0127 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [6/250], Iter [50/122] Training Accuracy1: 77.3438, Training Accuracy2: 75.0000, Loss1: 0.0033, Loss2: 0.0041, Pure Ratio1: 9.8938, Pure Ratio2 9.8230
+Epoch [6/250], Iter [100/122] Training Accuracy1: 73.4375, Training Accuracy2: 72.6562, Loss1: 0.0031, Loss2: 0.0037, Pure Ratio1: 9.9646, Pure Ratio2 9.9912
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [6/250] Test Accuracy on the 10000 test images: Model1 29.0565 % Model2 27.8546 %, Pure Ratio 1 10.1262 %, Pure Ratio 2 10.1407 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [7/250], Iter [50/122] Training Accuracy1: 78.9062, Training Accuracy2: 71.8750, Loss1: 0.0027, Loss2: 0.0030, Pure Ratio1: 10.3091, Pure Ratio2 10.2364
+Epoch [7/250], Iter [100/122] Training Accuracy1: 72.6562, Training Accuracy2: 69.5312, Loss1: 0.0041, Loss2: 0.0040, Pure Ratio1: 10.1182, Pure Ratio2 10.0545
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [7/250] Test Accuracy on the 10000 test images: Model1 30.2985 % Model2 27.5240 %, Pure Ratio 1 10.0894 %, Pure Ratio 2 10.0447 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [8/250], Iter [50/122] Training Accuracy1: 73.4375, Training Accuracy2: 73.4375, Loss1: 0.0033, Loss2: 0.0034, Pure Ratio1: 10.3333, Pure Ratio2 10.1852
+Epoch [8/250], Iter [100/122] Training Accuracy1: 75.0000, Training Accuracy2: 72.6562, Loss1: 0.0034, Loss2: 0.0037, Pure Ratio1: 10.1111, Pure Ratio2 10.0648
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [8/250] Test Accuracy on the 10000 test images: Model1 28.9062 % Model2 29.3269 %, Pure Ratio 1 10.0486 %, Pure Ratio 2 9.9879 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [9/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 82.8125, Loss1: 0.0019, Loss2: 0.0014, Pure Ratio1: 10.4000, Pure Ratio2 10.3619
+Epoch [9/250], Iter [100/122] Training Accuracy1: 77.3438, Training Accuracy2: 80.4688, Loss1: 0.0015, Loss2: 0.0015, Pure Ratio1: 10.3429, Pure Ratio2 10.4095
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [9/250] Test Accuracy on the 10000 test images: Model1 28.7560 % Model2 28.3954 %, Pure Ratio 1 10.1171 %, Pure Ratio 2 10.1874 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [10/250], Iter [50/122] Training Accuracy1: 74.2188, Training Accuracy2: 75.7812, Loss1: 0.0023, Loss2: 0.0016, Pure Ratio1: 9.5882, Pure Ratio2 9.5882
+Epoch [10/250], Iter [100/122] Training Accuracy1: 75.7812, Training Accuracy2: 78.1250, Loss1: 0.0021, Loss2: 0.0023, Pure Ratio1: 10.0588, Pure Ratio2 10.1667
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [10/250] Test Accuracy on the 10000 test images: Model1 27.0333 % Model2 26.8630 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [11/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 80.4688, Loss1: 0.0022, Loss2: 0.0015, Pure Ratio1: 9.6667, Pure Ratio2 9.8627
+Epoch [11/250], Iter [100/122] Training Accuracy1: 77.3438, Training Accuracy2: 71.0938, Loss1: 0.0019, Loss2: 0.0020, Pure Ratio1: 9.9706, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [11/250] Test Accuracy on the 10000 test images: Model1 27.3838 % Model2 28.2853 %, Pure Ratio 1 9.9807 %, Pure Ratio 2 10.0209 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [12/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 83.5938, Loss1: 0.0015, Loss2: 0.0013, Pure Ratio1: 10.6863, Pure Ratio2 10.5098
+Epoch [12/250], Iter [100/122] Training Accuracy1: 75.0000, Training Accuracy2: 77.3438, Loss1: 0.0029, Loss2: 0.0019, Pure Ratio1: 10.2549, Pure Ratio2 10.0490
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [12/250] Test Accuracy on the 10000 test images: Model1 28.7560 % Model2 29.4471 %, Pure Ratio 1 10.2138 %, Pure Ratio 2 10.0209 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [13/250], Iter [50/122] Training Accuracy1: 75.7812, Training Accuracy2: 78.9062, Loss1: 0.0021, Loss2: 0.0024, Pure Ratio1: 10.4706, Pure Ratio2 10.4706
+Epoch [13/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 79.6875, Loss1: 0.0009, Loss2: 0.0014, Pure Ratio1: 10.0980, Pure Ratio2 10.0980
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [13/250] Test Accuracy on the 10000 test images: Model1 28.4756 % Model2 29.8778 %, Pure Ratio 1 10.1736 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [14/250], Iter [50/122] Training Accuracy1: 76.5625, Training Accuracy2: 79.6875, Loss1: 0.0009, Loss2: 0.0009, Pure Ratio1: 10.0784, Pure Ratio2 9.9020
+Epoch [14/250], Iter [100/122] Training Accuracy1: 78.1250, Training Accuracy2: 77.3438, Loss1: 0.0017, Loss2: 0.0022, Pure Ratio1: 10.1667, Pure Ratio2 10.1765
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [14/250] Test Accuracy on the 10000 test images: Model1 31.1899 % Model2 29.1767 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.1896 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [15/250], Iter [50/122] Training Accuracy1: 78.1250, Training Accuracy2: 74.2188, Loss1: 0.0022, Loss2: 0.0020, Pure Ratio1: 10.2157, Pure Ratio2 10.2941
+Epoch [15/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 84.3750, Loss1: 0.0012, Loss2: 0.0009, Pure Ratio1: 10.1569, Pure Ratio2 10.2549
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [15/250] Test Accuracy on the 10000 test images: Model1 29.4271 % Model2 30.2384 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [16/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 82.8125, Loss1: 0.0007, Loss2: 0.0006, Pure Ratio1: 10.4902, Pure Ratio2 10.4314
+Epoch [16/250], Iter [100/122] Training Accuracy1: 78.1250, Training Accuracy2: 77.3438, Loss1: 0.0015, Loss2: 0.0016, Pure Ratio1: 10.0784, Pure Ratio2 10.0392
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [16/250] Test Accuracy on the 10000 test images: Model1 31.0597 % Model2 26.3622 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [17/250], Iter [50/122] Training Accuracy1: 77.3438, Training Accuracy2: 78.9062, Loss1: 0.0023, Loss2: 0.0014, Pure Ratio1: 10.7255, Pure Ratio2 10.6275
+Epoch [17/250], Iter [100/122] Training Accuracy1: 77.3438, Training Accuracy2: 77.3438, Loss1: 0.0010, Loss2: 0.0018, Pure Ratio1: 10.1373, Pure Ratio2 9.9706
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [17/250] Test Accuracy on the 10000 test images: Model1 28.7861 % Model2 30.3886 %, Pure Ratio 1 10.1736 %, Pure Ratio 2 10.0129 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [18/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 84.3750, Loss1: 0.0008, Loss2: 0.0010, Pure Ratio1: 9.7255, Pure Ratio2 9.8039
+Epoch [18/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 80.4688, Loss1: 0.0006, Loss2: 0.0013, Pure Ratio1: 9.9706, Pure Ratio2 9.8824
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [18/250] Test Accuracy on the 10000 test images: Model1 32.1615 % Model2 30.6190 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [19/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 77.3438, Loss1: 0.0022, Loss2: 0.0015, Pure Ratio1: 10.4510, Pure Ratio2 10.2941
+Epoch [19/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 79.6875, Loss1: 0.0016, Loss2: 0.0010, Pure Ratio1: 10.3333, Pure Ratio2 10.2255
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [19/250] Test Accuracy on the 10000 test images: Model1 30.8293 % Model2 30.6390 %, Pure Ratio 1 10.2057 %, Pure Ratio 2 10.1736 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [20/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 83.5938, Loss1: 0.0008, Loss2: 0.0010, Pure Ratio1: 9.7451, Pure Ratio2 9.8824
+Epoch [20/250], Iter [100/122] Training Accuracy1: 78.1250, Training Accuracy2: 75.0000, Loss1: 0.0011, Loss2: 0.0014, Pure Ratio1: 9.8627, Pure Ratio2 9.9118
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [20/250] Test Accuracy on the 10000 test images: Model1 31.4002 % Model2 31.2901 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [21/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 78.1250, Loss1: 0.0010, Loss2: 0.0012, Pure Ratio1: 10.0000, Pure Ratio2 9.9608
+Epoch [21/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 80.4688, Loss1: 0.0012, Loss2: 0.0018, Pure Ratio1: 9.9020, Pure Ratio2 9.9216
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [21/250] Test Accuracy on the 10000 test images: Model1 31.2099 % Model2 30.4087 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [22/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0007, Loss2: 0.0009, Pure Ratio1: 9.7255, Pure Ratio2 9.6275
+Epoch [22/250], Iter [100/122] Training Accuracy1: 75.7812, Training Accuracy2: 75.0000, Loss1: 0.0018, Loss2: 0.0018, Pure Ratio1: 10.0980, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [22/250] Test Accuracy on the 10000 test images: Model1 31.8009 % Model2 27.9948 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [23/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 79.6875, Loss1: 0.0004, Loss2: 0.0005, Pure Ratio1: 9.7647, Pure Ratio2 9.6667
+Epoch [23/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 83.5938, Loss1: 0.0009, Loss2: 0.0003, Pure Ratio1: 10.3137, Pure Ratio2 10.1863
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [23/250] Test Accuracy on the 10000 test images: Model1 30.4788 % Model2 30.6390 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [24/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 84.3750, Loss1: 0.0015, Loss2: 0.0002, Pure Ratio1: 9.8627, Pure Ratio2 9.8235
+Epoch [24/250], Iter [100/122] Training Accuracy1: 78.1250, Training Accuracy2: 79.6875, Loss1: 0.0025, Loss2: 0.0014, Pure Ratio1: 10.2549, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [24/250] Test Accuracy on the 10000 test images: Model1 31.7808 % Model2 31.5905 %, Pure Ratio 1 10.2379 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [25/250], Iter [50/122] Training Accuracy1: 77.3438, Training Accuracy2: 77.3438, Loss1: 0.0024, Loss2: 0.0021, Pure Ratio1: 10.0392, Pure Ratio2 10.0392
+Epoch [25/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 78.9062, Loss1: 0.0013, Loss2: 0.0011, Pure Ratio1: 10.2059, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [25/250] Test Accuracy on the 10000 test images: Model1 29.8678 % Model2 30.1683 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [26/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 79.6875, Loss1: 0.0012, Loss2: 0.0012, Pure Ratio1: 10.0784, Pure Ratio2 10.2157
+Epoch [26/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0006, Loss2: 0.0005, Pure Ratio1: 9.7157, Pure Ratio2 9.8235
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [26/250] Test Accuracy on the 10000 test images: Model1 32.1815 % Model2 31.3101 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [27/250], Iter [50/122] Training Accuracy1: 79.6875, Training Accuracy2: 80.4688, Loss1: 0.0010, Loss2: 0.0009, Pure Ratio1: 9.5686, Pure Ratio2 9.5294
+Epoch [27/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 84.3750, Loss1: 0.0006, Loss2: 0.0002, Pure Ratio1: 10.0588, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [27/250] Test Accuracy on the 10000 test images: Model1 30.9095 % Model2 30.8894 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 9.9646 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [28/250], Iter [50/122] Training Accuracy1: 79.6875, Training Accuracy2: 79.6875, Loss1: 0.0022, Loss2: 0.0016, Pure Ratio1: 10.0784, Pure Ratio2 10.3529
+Epoch [28/250], Iter [100/122] Training Accuracy1: 79.6875, Training Accuracy2: 82.8125, Loss1: 0.0012, Loss2: 0.0011, Pure Ratio1: 10.0098, Pure Ratio2 10.0980
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [28/250] Test Accuracy on the 10000 test images: Model1 31.7408 % Model2 31.5405 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [29/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 81.2500, Loss1: 0.0002, Loss2: 0.0005, Pure Ratio1: 10.4118, Pure Ratio2 10.4314
+Epoch [29/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.8125, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.1275, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [29/250] Test Accuracy on the 10000 test images: Model1 32.3618 % Model2 29.4171 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 9.9486 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [30/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 78.9062, Loss1: 0.0011, Loss2: 0.0016, Pure Ratio1: 10.5686, Pure Ratio2 10.4706
+Epoch [30/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.0312, Loss1: 0.0002, Loss2: 0.0005, Pure Ratio1: 10.0392, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [30/250] Test Accuracy on the 10000 test images: Model1 30.8994 % Model2 30.2784 %, Pure Ratio 1 9.9405 %, Pure Ratio 2 9.9968 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [31/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 80.4688, Loss1: 0.0014, Loss2: 0.0007, Pure Ratio1: 10.2941, Pure Ratio2 10.2353
+Epoch [31/250], Iter [100/122] Training Accuracy1: 78.1250, Training Accuracy2: 75.7812, Loss1: 0.0007, Loss2: 0.0010, Pure Ratio1: 10.1569, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [31/250] Test Accuracy on the 10000 test images: Model1 31.0497 % Model2 30.7692 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [32/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 81.2500, Loss1: 0.0004, Loss2: 0.0015, Pure Ratio1: 10.0588, Pure Ratio2 9.9412
+Epoch [32/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 82.0312, Loss1: 0.0012, Loss2: 0.0009, Pure Ratio1: 10.0294, Pure Ratio2 9.8824
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [32/250] Test Accuracy on the 10000 test images: Model1 32.1114 % Model2 31.9611 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [33/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 85.9375, Loss1: 0.0006, Loss2: 0.0007, Pure Ratio1: 9.3333, Pure Ratio2 9.3137
+Epoch [33/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.8125, Loss1: 0.0013, Loss2: 0.0008, Pure Ratio1: 10.0490, Pure Ratio2 10.0882
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [33/250] Test Accuracy on the 10000 test images: Model1 31.5004 % Model2 29.9379 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.1977 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [34/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 81.2500, Loss1: 0.0004, Loss2: 0.0006, Pure Ratio1: 9.8431, Pure Ratio2 9.7059
+Epoch [34/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 83.5938, Loss1: 0.0004, Loss2: 0.0002, Pure Ratio1: 9.8431, Pure Ratio2 9.9216
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [34/250] Test Accuracy on the 10000 test images: Model1 31.8109 % Model2 32.3718 %, Pure Ratio 1 10.0129 %, Pure Ratio 2 10.0129 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [35/250], Iter [50/122] Training Accuracy1: 80.4688, Training Accuracy2: 81.2500, Loss1: 0.0005, Loss2: 0.0007, Pure Ratio1: 10.0588, Pure Ratio2 10.0000
+Epoch [35/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 82.8125, Loss1: 0.0010, Loss2: 0.0007, Pure Ratio1: 9.9902, Pure Ratio2 9.9020
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [35/250] Test Accuracy on the 10000 test images: Model1 30.2083 % Model2 30.7492 %, Pure Ratio 1 10.2379 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [36/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0005, Loss2: 0.0005, Pure Ratio1: 9.4706, Pure Ratio2 9.5098
+Epoch [36/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 79.6875, Loss1: 0.0004, Loss2: 0.0010, Pure Ratio1: 10.0294, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [36/250] Test Accuracy on the 10000 test images: Model1 31.3301 % Model2 31.8610 %, Pure Ratio 1 10.0289 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [37/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 87.5000, Loss1: 0.0005, Loss2: 0.0003, Pure Ratio1: 10.1373, Pure Ratio2 10.2941
+Epoch [37/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 83.5938, Loss1: 0.0008, Loss2: 0.0008, Pure Ratio1: 10.3431, Pure Ratio2 10.3824
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [37/250] Test Accuracy on the 10000 test images: Model1 31.4804 % Model2 32.5421 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [38/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 84.3750, Loss1: 0.0002, Loss2: 0.0003, Pure Ratio1: 9.9804, Pure Ratio2 10.0000
+Epoch [38/250], Iter [100/122] Training Accuracy1: 79.6875, Training Accuracy2: 83.5938, Loss1: 0.0006, Loss2: 0.0004, Pure Ratio1: 10.1569, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [38/250] Test Accuracy on the 10000 test images: Model1 31.1498 % Model2 32.7524 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [39/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 84.3750, Loss1: 0.0006, Loss2: 0.0006, Pure Ratio1: 10.1961, Pure Ratio2 10.1961
+Epoch [39/250], Iter [100/122] Training Accuracy1: 78.9062, Training Accuracy2: 78.1250, Loss1: 0.0012, Loss2: 0.0025, Pure Ratio1: 10.0980, Pure Ratio2 10.0686
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [39/250] Test Accuracy on the 10000 test images: Model1 30.8594 % Model2 31.5805 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [40/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 87.5000, Loss1: 0.0007, Loss2: 0.0005, Pure Ratio1: 10.7647, Pure Ratio2 10.6863
+Epoch [40/250], Iter [100/122] Training Accuracy1: 78.9062, Training Accuracy2: 80.4688, Loss1: 0.0006, Loss2: 0.0012, Pure Ratio1: 10.1471, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [40/250] Test Accuracy on the 10000 test images: Model1 31.2400 % Model2 33.0829 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [41/250], Iter [50/122] Training Accuracy1: 78.9062, Training Accuracy2: 81.2500, Loss1: 0.0004, Loss2: 0.0005, Pure Ratio1: 10.2745, Pure Ratio2 10.3725
+Epoch [41/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 78.9062, Loss1: 0.0008, Loss2: 0.0013, Pure Ratio1: 10.2549, Pure Ratio2 10.2451
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [41/250] Test Accuracy on the 10000 test images: Model1 32.0713 % Model2 31.3902 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [42/250], Iter [50/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.0312, Loss1: 0.0008, Loss2: 0.0003, Pure Ratio1: 10.0980, Pure Ratio2 10.3137
+Epoch [42/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 79.6875, Loss1: 0.0004, Loss2: 0.0007, Pure Ratio1: 10.1373, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [42/250] Test Accuracy on the 10000 test images: Model1 30.9896 % Model2 33.0429 %, Pure Ratio 1 9.9566 %, Pure Ratio 2 9.9807 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [43/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0008, Loss2: 0.0005, Pure Ratio1: 10.3333, Pure Ratio2 10.2549
+Epoch [43/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 82.0312, Loss1: 0.0005, Loss2: 0.0010, Pure Ratio1: 10.2255, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [43/250] Test Accuracy on the 10000 test images: Model1 32.3217 % Model2 32.5220 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [44/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 85.9375, Loss1: 0.0002, Loss2: 0.0005, Pure Ratio1: 10.3137, Pure Ratio2 10.4510
+Epoch [44/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 82.0312, Loss1: 0.0004, Loss2: 0.0003, Pure Ratio1: 10.0392, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [44/250] Test Accuracy on the 10000 test images: Model1 32.6623 % Model2 32.9327 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [45/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0006, Loss2: 0.0009, Pure Ratio1: 9.6471, Pure Ratio2 9.8235
+Epoch [45/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 84.3750, Loss1: 0.0011, Loss2: 0.0010, Pure Ratio1: 9.9118, Pure Ratio2 9.9804
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [45/250] Test Accuracy on the 10000 test images: Model1 32.1715 % Model2 31.7909 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1896 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [46/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 89.8438, Loss1: 0.0002, Loss2: 0.0008, Pure Ratio1: 10.0588, Pure Ratio2 10.2353
+Epoch [46/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 87.5000, Loss1: 0.0003, Loss2: 0.0002, Pure Ratio1: 10.0294, Pure Ratio2 10.2255
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [46/250] Test Accuracy on the 10000 test images: Model1 31.0797 % Model2 31.9712 %, Pure Ratio 1 9.9887 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [47/250], Iter [50/122] Training Accuracy1: 79.6875, Training Accuracy2: 78.9062, Loss1: 0.0018, Loss2: 0.0011, Pure Ratio1: 9.7647, Pure Ratio2 9.7451
+Epoch [47/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 89.8438, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 9.7647, Pure Ratio2 9.7745
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [47/250] Test Accuracy on the 10000 test images: Model1 33.1230 % Model2 32.5421 %, Pure Ratio 1 10.0370 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [48/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.8125, Loss1: 0.0008, Loss2: 0.0013, Pure Ratio1: 10.5098, Pure Ratio2 10.2157
+Epoch [48/250], Iter [100/122] Training Accuracy1: 76.5625, Training Accuracy2: 76.5625, Loss1: 0.0014, Loss2: 0.0016, Pure Ratio1: 10.2549, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [48/250] Test Accuracy on the 10000 test images: Model1 32.5120 % Model2 32.0513 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.0048 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [49/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 82.0312, Loss1: 0.0009, Loss2: 0.0006, Pure Ratio1: 10.1176, Pure Ratio2 10.0392
+Epoch [49/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0004, Loss2: 0.0003, Pure Ratio1: 10.1176, Pure Ratio2 10.0392
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [49/250] Test Accuracy on the 10000 test images: Model1 32.6122 % Model2 32.5421 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 9.9887 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [50/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 82.8125, Loss1: 0.0004, Loss2: 0.0007, Pure Ratio1: 9.6863, Pure Ratio2 9.6667
+Epoch [50/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.1562, Loss1: 0.0005, Loss2: 0.0002, Pure Ratio1: 10.1765, Pure Ratio2 10.2157
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [50/250] Test Accuracy on the 10000 test images: Model1 31.2400 % Model2 31.3802 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [51/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 82.8125, Loss1: 0.0006, Loss2: 0.0004, Pure Ratio1: 9.7843, Pure Ratio2 9.8235
+Epoch [51/250], Iter [100/122] Training Accuracy1: 78.1250, Training Accuracy2: 79.6875, Loss1: 0.0008, Loss2: 0.0012, Pure Ratio1: 9.9706, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [51/250] Test Accuracy on the 10000 test images: Model1 32.1715 % Model2 32.5921 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [52/250], Iter [50/122] Training Accuracy1: 80.4688, Training Accuracy2: 80.4688, Loss1: 0.0006, Loss2: 0.0002, Pure Ratio1: 10.2941, Pure Ratio2 10.0980
+Epoch [52/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 82.8125, Loss1: 0.0004, Loss2: 0.0004, Pure Ratio1: 10.1078, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [52/250] Test Accuracy on the 10000 test images: Model1 31.8209 % Model2 32.4820 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.2218 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [53/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0008, Pure Ratio1: 9.9216, Pure Ratio2 10.0000
+Epoch [53/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 82.0312, Loss1: 0.0005, Loss2: 0.0007, Pure Ratio1: 10.3039, Pure Ratio2 10.4118
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [53/250] Test Accuracy on the 10000 test images: Model1 32.6422 % Model2 32.9627 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.1896 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [54/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 90.6250, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.4314, Pure Ratio2 9.3922
+Epoch [54/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 82.8125, Loss1: 0.0007, Loss2: 0.0010, Pure Ratio1: 10.0490, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [54/250] Test Accuracy on the 10000 test images: Model1 33.2632 % Model2 32.8526 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [55/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.8125, Loss1: 0.0016, Loss2: 0.0009, Pure Ratio1: 10.1961, Pure Ratio2 10.0000
+Epoch [55/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 78.9062, Loss1: 0.0003, Loss2: 0.0009, Pure Ratio1: 10.0784, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [55/250] Test Accuracy on the 10000 test images: Model1 31.6907 % Model2 31.5705 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [56/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 90.6250, Loss1: 0.0004, Loss2: 0.0001, Pure Ratio1: 9.9608, Pure Ratio2 10.1765
+Epoch [56/250], Iter [100/122] Training Accuracy1: 78.9062, Training Accuracy2: 81.2500, Loss1: 0.0009, Loss2: 0.0008, Pure Ratio1: 10.1176, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [56/250] Test Accuracy on the 10000 test images: Model1 32.4920 % Model2 33.3433 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.1977 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [57/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.7059, Pure Ratio2 9.9412
+Epoch [57/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.0312, Loss1: 0.0006, Loss2: 0.0008, Pure Ratio1: 10.0882, Pure Ratio2 10.1275
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [57/250] Test Accuracy on the 10000 test images: Model1 32.7424 % Model2 33.4535 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [58/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 80.4688, Loss1: 0.0003, Loss2: 0.0006, Pure Ratio1: 10.1569, Pure Ratio2 10.2157
+Epoch [58/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0002, Pure Ratio1: 10.0000, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [58/250] Test Accuracy on the 10000 test images: Model1 32.4419 % Model2 31.3001 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [59/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 89.0625, Loss1: 0.0009, Loss2: 0.0002, Pure Ratio1: 10.0000, Pure Ratio2 10.0392
+Epoch [59/250], Iter [100/122] Training Accuracy1: 76.5625, Training Accuracy2: 74.2188, Loss1: 0.0012, Loss2: 0.0025, Pure Ratio1: 10.0784, Pure Ratio2 10.1275
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [59/250] Test Accuracy on the 10000 test images: Model1 32.8526 % Model2 31.9712 %, Pure Ratio 1 10.0129 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [60/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 86.7188, Loss1: 0.0003, Loss2: 0.0003, Pure Ratio1: 10.4706, Pure Ratio2 10.4314
+Epoch [60/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0004, Pure Ratio1: 9.9804, Pure Ratio2 9.9510
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [60/250] Test Accuracy on the 10000 test images: Model1 33.2833 % Model2 33.1631 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [61/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 85.1562, Loss1: 0.0003, Loss2: 0.0011, Pure Ratio1: 9.7843, Pure Ratio2 9.7255
+Epoch [61/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 78.9062, Loss1: 0.0006, Loss2: 0.0005, Pure Ratio1: 10.0490, Pure Ratio2 9.8922
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [61/250] Test Accuracy on the 10000 test images: Model1 33.2833 % Model2 32.8225 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [62/250], Iter [50/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.8125, Loss1: 0.0013, Loss2: 0.0006, Pure Ratio1: 9.2549, Pure Ratio2 9.3529
+Epoch [62/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 82.0312, Loss1: 0.0008, Loss2: 0.0010, Pure Ratio1: 10.0294, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [62/250] Test Accuracy on the 10000 test images: Model1 32.6823 % Model2 31.9311 %, Pure Ratio 1 10.0048 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [63/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.0312, Loss1: 0.0001, Loss2: 0.0006, Pure Ratio1: 9.6275, Pure Ratio2 9.8824
+Epoch [63/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 80.4688, Loss1: 0.0003, Loss2: 0.0008, Pure Ratio1: 9.9020, Pure Ratio2 9.9216
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [63/250] Test Accuracy on the 10000 test images: Model1 32.8726 % Model2 33.5837 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [64/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0005, Loss2: 0.0001, Pure Ratio1: 10.0196, Pure Ratio2 9.8824
+Epoch [64/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0003, Pure Ratio1: 10.0000, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [64/250] Test Accuracy on the 10000 test images: Model1 33.1030 % Model2 33.3934 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [65/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.6471, Pure Ratio2 10.7255
+Epoch [65/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 86.7188, Loss1: 0.0003, Loss2: 0.0011, Pure Ratio1: 10.2059, Pure Ratio2 10.2549
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [65/250] Test Accuracy on the 10000 test images: Model1 32.2516 % Model2 32.8926 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [66/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0004, Loss2: 0.0004, Pure Ratio1: 9.7451, Pure Ratio2 9.7059
+Epoch [66/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 84.3750, Loss1: 0.0005, Loss2: 0.0004, Pure Ratio1: 10.1373, Pure Ratio2 10.1275
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [66/250] Test Accuracy on the 10000 test images: Model1 33.6839 % Model2 32.6122 %, Pure Ratio 1 10.0611 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [67/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0005, Loss2: 0.0005, Pure Ratio1: 9.8824, Pure Ratio2 9.9020
+Epoch [67/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0004, Loss2: 0.0010, Pure Ratio1: 10.1765, Pure Ratio2 10.2451
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [67/250] Test Accuracy on the 10000 test images: Model1 32.7224 % Model2 32.6823 %, Pure Ratio 1 10.1736 %, Pure Ratio 2 10.2379 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [68/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.8235, Pure Ratio2 9.9412
+Epoch [68/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 10.0294, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [68/250] Test Accuracy on the 10000 test images: Model1 33.1731 % Model2 33.1731 %, Pure Ratio 1 10.0129 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [69/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 79.6875, Loss1: 0.0003, Loss2: 0.0007, Pure Ratio1: 9.0980, Pure Ratio2 9.3725
+Epoch [69/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.9375, Loss1: 0.0007, Loss2: 0.0012, Pure Ratio1: 9.8725, Pure Ratio2 9.8922
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [69/250] Test Accuracy on the 10000 test images: Model1 32.8025 % Model2 33.3834 %, Pure Ratio 1 9.9646 %, Pure Ratio 2 10.0048 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [70/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.8125, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.2353, Pure Ratio2 9.9804
+Epoch [70/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0005, Loss2: 0.0004, Pure Ratio1: 10.1569, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [70/250] Test Accuracy on the 10000 test images: Model1 32.5120 % Model2 33.4135 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.0289 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [71/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 89.0625, Loss1: 0.0004, Loss2: 0.0001, Pure Ratio1: 10.1176, Pure Ratio2 9.9412
+Epoch [71/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 87.5000, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.0980, Pure Ratio2 10.0294
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [71/250] Test Accuracy on the 10000 test images: Model1 33.5337 % Model2 32.8826 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [72/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 82.0312, Loss1: 0.0007, Loss2: 0.0020, Pure Ratio1: 10.0588, Pure Ratio2 10.0980
+Epoch [72/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 89.0625, Loss1: 0.0004, Loss2: 0.0002, Pure Ratio1: 9.9412, Pure Ratio2 10.0294
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [72/250] Test Accuracy on the 10000 test images: Model1 33.8542 % Model2 32.3217 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [73/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 10.5490, Pure Ratio2 10.5490
+Epoch [73/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 79.6875, Loss1: 0.0003, Loss2: 0.0010, Pure Ratio1: 10.0980, Pure Ratio2 10.0882
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [73/250] Test Accuracy on the 10000 test images: Model1 33.3033 % Model2 33.3233 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [74/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 85.1562, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 10.3529, Pure Ratio2 10.3529
+Epoch [74/250], Iter [100/122] Training Accuracy1: 79.6875, Training Accuracy2: 80.4688, Loss1: 0.0011, Loss2: 0.0006, Pure Ratio1: 9.6961, Pure Ratio2 9.8235
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [74/250] Test Accuracy on the 10000 test images: Model1 31.9010 % Model2 31.4203 %, Pure Ratio 1 9.9566 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [75/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0002, Pure Ratio1: 9.6275, Pure Ratio2 9.6863
+Epoch [75/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 83.5938, Loss1: 0.0005, Loss2: 0.0002, Pure Ratio1: 10.0588, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [75/250] Test Accuracy on the 10000 test images: Model1 33.5236 % Model2 33.2732 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.0289 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [76/250], Iter [50/122] Training Accuracy1: 79.6875, Training Accuracy2: 79.6875, Loss1: 0.0010, Loss2: 0.0012, Pure Ratio1: 9.8039, Pure Ratio2 9.7843
+Epoch [76/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.0312, Loss1: 0.0001, Loss2: 0.0008, Pure Ratio1: 9.9118, Pure Ratio2 9.8922
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [76/250] Test Accuracy on the 10000 test images: Model1 32.9127 % Model2 33.3634 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [77/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0006, Pure Ratio1: 10.1569, Pure Ratio2 10.3922
+Epoch [77/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0008, Loss2: 0.0006, Pure Ratio1: 10.1863, Pure Ratio2 10.3431
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [77/250] Test Accuracy on the 10000 test images: Model1 33.6538 % Model2 34.6154 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [78/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.9412, Pure Ratio2 9.9804
+Epoch [78/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.0312, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.0000, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [78/250] Test Accuracy on the 10000 test images: Model1 32.7224 % Model2 32.3518 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [79/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 84.3750, Loss1: 0.0012, Loss2: 0.0010, Pure Ratio1: 10.6078, Pure Ratio2 10.6667
+Epoch [79/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.0312, Loss1: 0.0002, Loss2: 0.0009, Pure Ratio1: 10.1373, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [79/250] Test Accuracy on the 10000 test images: Model1 33.5837 % Model2 32.7524 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [80/250], Iter [50/122] Training Accuracy1: 79.6875, Training Accuracy2: 83.5938, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.0588, Pure Ratio2 10.0980
+Epoch [80/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 87.5000, Loss1: 0.0010, Loss2: 0.0002, Pure Ratio1: 10.2157, Pure Ratio2 10.2353
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [80/250] Test Accuracy on the 10000 test images: Model1 33.9844 % Model2 33.0829 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [81/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 84.3750, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.3529, Pure Ratio2 10.2549
+Epoch [81/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 82.0312, Loss1: 0.0008, Loss2: 0.0013, Pure Ratio1: 10.0588, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [81/250] Test Accuracy on the 10000 test images: Model1 32.8125 % Model2 32.7724 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [82/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0016, Pure Ratio1: 10.6078, Pure Ratio2 10.5294
+Epoch [82/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 89.8438, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.1961, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [82/250] Test Accuracy on the 10000 test images: Model1 31.5605 % Model2 33.0329 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [83/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 88.2812, Loss1: 0.0004, Loss2: 0.0001, Pure Ratio1: 10.4706, Pure Ratio2 10.5686
+Epoch [83/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0005, Pure Ratio1: 10.1471, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [83/250] Test Accuracy on the 10000 test images: Model1 32.8526 % Model2 32.0413 %, Pure Ratio 1 10.0129 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [84/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0006, Pure Ratio1: 9.7255, Pure Ratio2 9.4902
+Epoch [84/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 84.3750, Loss1: 0.0002, Loss2: 0.0005, Pure Ratio1: 10.4118, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [84/250] Test Accuracy on the 10000 test images: Model1 32.7624 % Model2 33.0228 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.0129 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [85/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 10.6275, Pure Ratio2 10.5098
+Epoch [85/250], Iter [100/122] Training Accuracy1: 92.9688, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.2647
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [85/250] Test Accuracy on the 10000 test images: Model1 32.6723 % Model2 32.6522 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [86/250], Iter [50/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.8125, Loss1: 0.0016, Loss2: 0.0004, Pure Ratio1: 10.1569, Pure Ratio2 10.1961
+Epoch [86/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0009, Loss2: 0.0011, Pure Ratio1: 9.9804, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [86/250] Test Accuracy on the 10000 test images: Model1 32.7324 % Model2 32.3317 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [87/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 82.0312, Loss1: 0.0003, Loss2: 0.0006, Pure Ratio1: 10.3333, Pure Ratio2 10.3529
+Epoch [87/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0002, Loss2: 0.0005, Pure Ratio1: 10.0490, Pure Ratio2 10.0686
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [87/250] Test Accuracy on the 10000 test images: Model1 33.5837 % Model2 33.5837 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [88/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0003, Pure Ratio1: 11.0000, Pure Ratio2 10.8431
+Epoch [88/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 80.4688, Loss1: 0.0006, Loss2: 0.0006, Pure Ratio1: 10.0294, Pure Ratio2 9.9804
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [88/250] Test Accuracy on the 10000 test images: Model1 33.8341 % Model2 33.2532 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [89/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 84.3750, Loss1: 0.0003, Loss2: 0.0002, Pure Ratio1: 10.5098, Pure Ratio2 10.2549
+Epoch [89/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 77.3438, Loss1: 0.0010, Loss2: 0.0010, Pure Ratio1: 10.2451, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [89/250] Test Accuracy on the 10000 test images: Model1 33.2532 % Model2 33.2833 %, Pure Ratio 1 10.2539 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [90/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.8125, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.2745, Pure Ratio2 10.3137
+Epoch [90/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.1471, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [90/250] Test Accuracy on the 10000 test images: Model1 32.4018 % Model2 33.2432 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [91/250], Iter [50/122] Training Accuracy1: 82.0312, Training Accuracy2: 83.5938, Loss1: 0.0004, Loss2: 0.0002, Pure Ratio1: 9.5490, Pure Ratio2 9.5882
+Epoch [91/250], Iter [100/122] Training Accuracy1: 79.6875, Training Accuracy2: 79.6875, Loss1: 0.0004, Loss2: 0.0005, Pure Ratio1: 10.1373, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [91/250] Test Accuracy on the 10000 test images: Model1 33.1030 % Model2 33.2232 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [92/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.1176, Pure Ratio2 10.2941
+Epoch [92/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 83.5938, Loss1: 0.0006, Loss2: 0.0005, Pure Ratio1: 9.9902, Pure Ratio2 9.9706
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [92/250] Test Accuracy on the 10000 test images: Model1 33.4736 % Model2 32.6122 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [93/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 79.6875, Loss1: 0.0009, Loss2: 0.0010, Pure Ratio1: 10.1373, Pure Ratio2 10.1569
+Epoch [93/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 82.8125, Loss1: 0.0008, Loss2: 0.0002, Pure Ratio1: 10.1275, Pure Ratio2 10.1667
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [93/250] Test Accuracy on the 10000 test images: Model1 32.1915 % Model2 32.7624 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [94/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 81.2500, Loss1: 0.0004, Loss2: 0.0012, Pure Ratio1: 10.2157, Pure Ratio2 10.2353
+Epoch [94/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 79.6875, Loss1: 0.0006, Loss2: 0.0010, Pure Ratio1: 10.2647, Pure Ratio2 10.1765
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [94/250] Test Accuracy on the 10000 test images: Model1 33.8141 % Model2 31.9511 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [95/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 84.3750, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 9.9804, Pure Ratio2 10.0196
+Epoch [95/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 10.2745, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [95/250] Test Accuracy on the 10000 test images: Model1 33.1330 % Model2 33.4435 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [96/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0005, Pure Ratio1: 10.0784, Pure Ratio2 9.9804
+Epoch [96/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 89.8438, Loss1: 0.0005, Loss2: 0.0001, Pure Ratio1: 10.1373, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [96/250] Test Accuracy on the 10000 test images: Model1 32.6422 % Model2 33.7640 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [97/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.2157, Pure Ratio2 10.4510
+Epoch [97/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.0980, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [97/250] Test Accuracy on the 10000 test images: Model1 33.6438 % Model2 32.5721 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [98/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 9.7255, Pure Ratio2 9.9020
+Epoch [98/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 83.5938, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 9.9020, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [98/250] Test Accuracy on the 10000 test images: Model1 33.0829 % Model2 34.2548 %, Pure Ratio 1 9.9727 %, Pure Ratio 2 10.1736 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [99/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 84.3750, Loss1: 0.0003, Loss2: 0.0004, Pure Ratio1: 10.4510, Pure Ratio2 10.1765
+Epoch [99/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 81.2500, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.2059, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [99/250] Test Accuracy on the 10000 test images: Model1 33.6639 % Model2 33.0128 %, Pure Ratio 1 10.2298 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [100/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.0196, Pure Ratio2 9.9216
+Epoch [100/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.8725, Pure Ratio2 9.9706
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [100/250] Test Accuracy on the 10000 test images: Model1 34.1747 % Model2 33.4635 %, Pure Ratio 1 10.0209 %, Pure Ratio 2 10.1816 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [101/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0006, Pure Ratio1: 10.2157, Pure Ratio2 10.2745
+Epoch [101/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 80.4688, Loss1: 0.0003, Loss2: 0.0004, Pure Ratio1: 10.1078, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [101/250] Test Accuracy on the 10000 test images: Model1 33.5036 % Model2 33.8341 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [102/250], Iter [50/122] Training Accuracy1: 78.9062, Training Accuracy2: 78.1250, Loss1: 0.0007, Loss2: 0.0014, Pure Ratio1: 10.0196, Pure Ratio2 9.9020
+Epoch [102/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 80.4688, Loss1: 0.0010, Loss2: 0.0009, Pure Ratio1: 10.0490, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [102/250] Test Accuracy on the 10000 test images: Model1 34.4651 % Model2 35.0160 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [103/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 83.5938, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.4706, Pure Ratio2 10.4118
+Epoch [103/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.9375, Loss1: 0.0002, Loss2: 0.0003, Pure Ratio1: 10.1667, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [103/250] Test Accuracy on the 10000 test images: Model1 33.8842 % Model2 33.5437 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.1414 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [104/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0004, Loss2: 0.0002, Pure Ratio1: 10.0000, Pure Ratio2 10.1176
+Epoch [104/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.1275, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [104/250] Test Accuracy on the 10000 test images: Model1 33.5036 % Model2 33.8442 %, Pure Ratio 1 10.0209 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [105/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 85.1562, Loss1: 0.0005, Loss2: 0.0001, Pure Ratio1: 10.6667, Pure Ratio2 10.5882
+Epoch [105/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.2353, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [105/250] Test Accuracy on the 10000 test images: Model1 34.5353 % Model2 34.8057 %, Pure Ratio 1 10.2138 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [106/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.1176, Pure Ratio2 10.0392
+Epoch [106/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 84.3750, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3137, Pure Ratio2 10.2549
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [106/250] Test Accuracy on the 10000 test images: Model1 33.7139 % Model2 34.1647 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.0129 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [107/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 85.9375, Loss1: 0.0003, Loss2: 0.0018, Pure Ratio1: 11.2353, Pure Ratio2 11.0784
+Epoch [107/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 85.1562, Loss1: 0.0003, Loss2: 0.0007, Pure Ratio1: 10.1863, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [107/250] Test Accuracy on the 10000 test images: Model1 33.5837 % Model2 34.1446 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.0129 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [108/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 84.3750, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.7255, Pure Ratio2 10.7451
+Epoch [108/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 83.5938, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.1078, Pure Ratio2 10.1275
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [108/250] Test Accuracy on the 10000 test images: Model1 33.4635 % Model2 34.3950 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1736 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [109/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 88.2812, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.4706, Pure Ratio2 10.4118
+Epoch [109/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 79.6875, Loss1: 0.0008, Loss2: 0.0014, Pure Ratio1: 10.1765, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [109/250] Test Accuracy on the 10000 test images: Model1 33.3433 % Model2 33.2332 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [110/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.9375, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 10.1569, Pure Ratio2 10.2157
+Epoch [110/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2941, Pure Ratio2 10.2157
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [110/250] Test Accuracy on the 10000 test images: Model1 34.0345 % Model2 34.0545 %, Pure Ratio 1 10.2218 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [111/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0004, Pure Ratio1: 10.6078, Pure Ratio2 10.3922
+Epoch [111/250], Iter [100/122] Training Accuracy1: 92.1875, Training Accuracy2: 91.4062, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.0686, Pure Ratio2 9.9118
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [111/250] Test Accuracy on the 10000 test images: Model1 32.9427 % Model2 33.0929 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 9.9646 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [112/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0196, Pure Ratio2 9.8431
+Epoch [112/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 86.7188, Loss1: 0.0004, Loss2: 0.0002, Pure Ratio1: 10.3235, Pure Ratio2 10.2157
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [112/250] Test Accuracy on the 10000 test images: Model1 33.9042 % Model2 33.3834 %, Pure Ratio 1 10.2459 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [113/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 10.2353, Pure Ratio2 10.1961
+Epoch [113/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0005, Pure Ratio1: 10.1863, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [113/250] Test Accuracy on the 10000 test images: Model1 33.5437 % Model2 33.7941 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [114/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.9375, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.5098, Pure Ratio2 10.4510
+Epoch [114/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0009, Loss2: 0.0002, Pure Ratio1: 10.2353, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [114/250] Test Accuracy on the 10000 test images: Model1 34.0545 % Model2 33.5337 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [115/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 84.3750, Loss1: 0.0001, Loss2: 0.0004, Pure Ratio1: 10.5686, Pure Ratio2 10.4314
+Epoch [115/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 9.9804, Pure Ratio2 9.9412
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [115/250] Test Accuracy on the 10000 test images: Model1 33.5537 % Model2 32.9627 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [116/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.8438, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 9.8039, Pure Ratio2 9.9608
+Epoch [116/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.8438, Loss1: 0.0003, Loss2: 0.0006, Pure Ratio1: 10.1078, Pure Ratio2 10.2451
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [116/250] Test Accuracy on the 10000 test images: Model1 34.4251 % Model2 34.6354 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.2379 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [117/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0009, Pure Ratio1: 9.7451, Pure Ratio2 10.0196
+Epoch [117/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.0000, Pure Ratio2 10.1863
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [117/250] Test Accuracy on the 10000 test images: Model1 33.3133 % Model2 34.1647 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.3022 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [118/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0000, Pure Ratio2 10.0784
+Epoch [118/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 89.8438, Loss1: 0.0001, Loss2: 0.0005, Pure Ratio1: 10.1078, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [118/250] Test Accuracy on the 10000 test images: Model1 34.3349 % Model2 34.2047 %, Pure Ratio 1 9.9968 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [119/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 79.6875, Loss1: 0.0004, Loss2: 0.0004, Pure Ratio1: 10.3137, Pure Ratio2 10.3922
+Epoch [119/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 80.4688, Loss1: 0.0004, Loss2: 0.0002, Pure Ratio1: 9.9608, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [119/250] Test Accuracy on the 10000 test images: Model1 34.6154 % Model2 34.4551 %, Pure Ratio 1 10.0289 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [120/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 9.5686, Pure Ratio2 9.9020
+Epoch [120/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.8824, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [120/250] Test Accuracy on the 10000 test images: Model1 33.5437 % Model2 33.7640 %, Pure Ratio 1 9.9807 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [121/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 82.8125, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.3922, Pure Ratio2 10.5294
+Epoch [121/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 87.5000, Loss1: 0.0003, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 10.2255
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [121/250] Test Accuracy on the 10000 test images: Model1 34.4451 % Model2 34.5252 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [122/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 90.6250, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.7843, Pure Ratio2 9.8627
+Epoch [122/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0016, Pure Ratio1: 9.9608, Pure Ratio2 9.9804
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [122/250] Test Accuracy on the 10000 test images: Model1 33.9844 % Model2 34.4050 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [123/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.3333, Pure Ratio2 10.1961
+Epoch [123/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.3235, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [123/250] Test Accuracy on the 10000 test images: Model1 33.8141 % Model2 34.0645 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 9.9727 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [124/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.1562, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.7451, Pure Ratio2 9.9020
+Epoch [124/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.0392, Pure Ratio2 10.0392
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [124/250] Test Accuracy on the 10000 test images: Model1 32.9527 % Model2 34.0745 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [125/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0010, Pure Ratio1: 10.1176, Pure Ratio2 10.1176
+Epoch [125/250], Iter [100/122] Training Accuracy1: 92.9688, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1471, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [125/250] Test Accuracy on the 10000 test images: Model1 34.2448 % Model2 33.6739 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [126/250], Iter [50/122] Training Accuracy1: 92.1875, Training Accuracy2: 91.4062, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.5490, Pure Ratio2 10.6078
+Epoch [126/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 87.5000, Loss1: 0.0003, Loss2: 0.0004, Pure Ratio1: 10.1569, Pure Ratio2 10.1765
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [126/250] Test Accuracy on the 10000 test images: Model1 33.2732 % Model2 33.3934 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [127/250], Iter [50/122] Training Accuracy1: 92.1875, Training Accuracy2: 91.4062, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 9.5490, Pure Ratio2 9.4902
+Epoch [127/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 9.9020, Pure Ratio2 9.8431
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [127/250] Test Accuracy on the 10000 test images: Model1 34.2548 % Model2 33.6438 %, Pure Ratio 1 10.0530 %, Pure Ratio 2 9.9887 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [128/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3529, Pure Ratio2 10.2353
+Epoch [128/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.0312, Loss1: 0.0001, Loss2: 0.0015, Pure Ratio1: 10.1078, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [128/250] Test Accuracy on the 10000 test images: Model1 33.7039 % Model2 34.0445 %, Pure Ratio 1 10.0289 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [129/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8627, Pure Ratio2 9.9804
+Epoch [129/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.9375, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 9.9314, Pure Ratio2 9.9510
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [129/250] Test Accuracy on the 10000 test images: Model1 34.1246 % Model2 33.5737 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [130/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.5490, Pure Ratio2 9.4902
+Epoch [130/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0004, Pure Ratio1: 10.1176, Pure Ratio2 10.0686
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [130/250] Test Accuracy on the 10000 test images: Model1 34.0445 % Model2 34.2248 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [131/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.1373, Pure Ratio2 10.1569
+Epoch [131/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.7549, Pure Ratio2 9.8137
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [131/250] Test Accuracy on the 10000 test images: Model1 33.3033 % Model2 33.8442 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [132/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 9.9804, Pure Ratio2 9.9020
+Epoch [132/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.0882
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [132/250] Test Accuracy on the 10000 test images: Model1 33.8041 % Model2 33.4736 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [133/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0784, Pure Ratio2 9.8824
+Epoch [133/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.0980, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [133/250] Test Accuracy on the 10000 test images: Model1 33.6639 % Model2 33.0028 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [134/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.6863, Pure Ratio2 10.4902
+Epoch [134/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2255, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [134/250] Test Accuracy on the 10000 test images: Model1 33.8742 % Model2 33.2031 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0209 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [135/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 9.8431, Pure Ratio2 9.8039
+Epoch [135/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.1875, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 9.8725, Pure Ratio2 9.8824
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [135/250] Test Accuracy on the 10000 test images: Model1 34.5353 % Model2 35.0060 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [136/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.7059, Pure Ratio2 9.7451
+Epoch [136/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.2059, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [136/250] Test Accuracy on the 10000 test images: Model1 34.5252 % Model2 34.7256 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [137/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 9.9216, Pure Ratio2 10.0000
+Epoch [137/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.9804, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [137/250] Test Accuracy on the 10000 test images: Model1 34.8958 % Model2 33.4135 %, Pure Ratio 1 10.0611 %, Pure Ratio 2 10.1414 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [138/250], Iter [50/122] Training Accuracy1: 92.9688, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.0000, Pure Ratio2 9.9608
+Epoch [138/250], Iter [100/122] Training Accuracy1: 79.6875, Training Accuracy2: 78.9062, Loss1: 0.0006, Loss2: 0.0011, Pure Ratio1: 10.1765, Pure Ratio2 10.1667
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [138/250] Test Accuracy on the 10000 test images: Model1 34.5453 % Model2 33.9243 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [139/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 81.2500, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.0588, Pure Ratio2 10.0588
+Epoch [139/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 80.4688, Loss1: 0.0003, Loss2: 0.0009, Pure Ratio1: 9.8725, Pure Ratio2 9.9608
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [139/250] Test Accuracy on the 10000 test images: Model1 34.8357 % Model2 34.1046 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 10.1896 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [140/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 87.5000, Loss1: 0.0006, Loss2: 0.0001, Pure Ratio1: 9.9020, Pure Ratio2 10.0980
+Epoch [140/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.8725, Pure Ratio2 9.9118
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [140/250] Test Accuracy on the 10000 test images: Model1 34.4050 % Model2 33.0729 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [141/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 89.0625, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.3137, Pure Ratio2 10.1569
+Epoch [141/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0980, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [141/250] Test Accuracy on the 10000 test images: Model1 33.9143 % Model2 33.9243 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [142/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0004, Pure Ratio1: 10.1569, Pure Ratio2 10.1961
+Epoch [142/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1667, Pure Ratio2 10.1863
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [142/250] Test Accuracy on the 10000 test images: Model1 34.2047 % Model2 33.7740 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [143/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.9020, Pure Ratio2 9.8431
+Epoch [143/250], Iter [100/122] Training Accuracy1: 92.1875, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.1863, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [143/250] Test Accuracy on the 10000 test images: Model1 34.1046 % Model2 34.2648 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [144/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.5882, Pure Ratio2 10.6275
+Epoch [144/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 83.5938, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.0882, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [144/250] Test Accuracy on the 10000 test images: Model1 34.8658 % Model2 34.6154 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.2459 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [145/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0392, Pure Ratio2 10.0588
+Epoch [145/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 9.9314
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [145/250] Test Accuracy on the 10000 test images: Model1 35.2264 % Model2 34.8157 %, Pure Ratio 1 10.2379 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [146/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0005, Pure Ratio1: 10.6275, Pure Ratio2 10.7059
+Epoch [146/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 89.8438, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 10.2353
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [146/250] Test Accuracy on the 10000 test images: Model1 34.7256 % Model2 34.3349 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.2057 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [147/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0002, Loss2: 0.0010, Pure Ratio1: 9.3725, Pure Ratio2 9.3922
+Epoch [147/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.0686, Pure Ratio2 10.0686
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [147/250] Test Accuracy on the 10000 test images: Model1 33.2432 % Model2 34.4251 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [148/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 84.3750, Loss1: 0.0002, Loss2: 0.0006, Pure Ratio1: 10.0196, Pure Ratio2 9.9020
+Epoch [148/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1569, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [148/250] Test Accuracy on the 10000 test images: Model1 34.8357 % Model2 34.5252 %, Pure Ratio 1 10.2057 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [149/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8039, Pure Ratio2 9.7843
+Epoch [149/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.8438, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2353, Pure Ratio2 10.2353
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [149/250] Test Accuracy on the 10000 test images: Model1 34.2648 % Model2 34.4551 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [150/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.0392
+Epoch [150/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 84.3750, Loss1: 0.0013, Loss2: 0.0006, Pure Ratio1: 10.2647, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [150/250] Test Accuracy on the 10000 test images: Model1 34.6554 % Model2 34.1647 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [151/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.3922, Pure Ratio2 10.3529
+Epoch [151/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.1176, Pure Ratio2 10.0882
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [151/250] Test Accuracy on the 10000 test images: Model1 34.3550 % Model2 34.4752 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [152/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2941, Pure Ratio2 10.0588
+Epoch [152/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0098, Pure Ratio2 9.8725
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [152/250] Test Accuracy on the 10000 test images: Model1 34.0345 % Model2 34.1947 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [153/250], Iter [50/122] Training Accuracy1: 93.7500, Training Accuracy2: 93.7500, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.5686, Pure Ratio2 10.5098
+Epoch [153/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9608, Pure Ratio2 9.9314
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [153/250] Test Accuracy on the 10000 test images: Model1 34.8758 % Model2 34.1146 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.1414 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [154/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.9804, Pure Ratio2 9.9020
+Epoch [154/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.1875, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.1275, Pure Ratio2 9.9804
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [154/250] Test Accuracy on the 10000 test images: Model1 34.4351 % Model2 34.4251 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.0289 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [155/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.8431, Pure Ratio2 9.7451
+Epoch [155/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0002, Loss2: 0.0001, Pure Ratio1: 10.0490, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [155/250] Test Accuracy on the 10000 test images: Model1 33.9543 % Model2 33.9944 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [156/250], Iter [50/122] Training Accuracy1: 81.2500, Training Accuracy2: 83.5938, Loss1: 0.0004, Loss2: 0.0003, Pure Ratio1: 10.1176, Pure Ratio2 10.1373
+Epoch [156/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.1471, Pure Ratio2 10.2745
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [156/250] Test Accuracy on the 10000 test images: Model1 34.1847 % Model2 34.4050 %, Pure Ratio 1 10.0611 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [157/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.0392, Pure Ratio2 9.9804
+Epoch [157/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9118, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [157/250] Test Accuracy on the 10000 test images: Model1 34.4952 % Model2 34.4651 %, Pure Ratio 1 9.9646 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [158/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.8438, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 10.7843, Pure Ratio2 10.7059
+Epoch [158/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 85.1562, Loss1: 0.0003, Loss2: 0.0002, Pure Ratio1: 10.4118, Pure Ratio2 10.3333
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [158/250] Test Accuracy on the 10000 test images: Model1 34.6354 % Model2 34.7356 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.0048 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [159/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 10.0000, Pure Ratio2 10.0196
+Epoch [159/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0003, Pure Ratio1: 10.2451, Pure Ratio2 10.3431
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [159/250] Test Accuracy on the 10000 test images: Model1 34.9259 % Model2 34.5753 %, Pure Ratio 1 9.9968 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [160/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 9.8431, Pure Ratio2 9.8039
+Epoch [160/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0882, Pure Ratio2 10.0490
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [160/250] Test Accuracy on the 10000 test images: Model1 35.0060 % Model2 34.9559 %, Pure Ratio 1 10.0611 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [161/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.3137, Pure Ratio2 10.0588
+Epoch [161/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0004, Loss2: 0.0003, Pure Ratio1: 10.2451, Pure Ratio2 9.9804
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [161/250] Test Accuracy on the 10000 test images: Model1 34.8157 % Model2 34.3950 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 9.9646 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [162/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 9.9804, Pure Ratio2 9.9020
+Epoch [162/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.8125, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 10.2941, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [162/250] Test Accuracy on the 10000 test images: Model1 34.5052 % Model2 34.9459 %, Pure Ratio 1 10.1736 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [163/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.7059, Pure Ratio2 10.7059
+Epoch [163/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.9688, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.3922, Pure Ratio2 10.3725
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [163/250] Test Accuracy on the 10000 test images: Model1 34.5252 % Model2 34.5453 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [164/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.5882, Pure Ratio2 9.6078
+Epoch [164/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 84.3750, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.0686, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [164/250] Test Accuracy on the 10000 test images: Model1 34.6554 % Model2 34.3450 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [165/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3333, Pure Ratio2 10.5294
+Epoch [165/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9020, Pure Ratio2 9.9706
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [165/250] Test Accuracy on the 10000 test images: Model1 34.7756 % Model2 34.4752 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [166/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.0980, Pure Ratio2 9.9804
+Epoch [166/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [166/250] Test Accuracy on the 10000 test images: Model1 34.6955 % Model2 34.9760 %, Pure Ratio 1 10.2057 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [167/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 81.2500, Loss1: 0.0002, Loss2: 0.0003, Pure Ratio1: 10.0000, Pure Ratio2 10.1569
+Epoch [167/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0000, Loss2: 0.0006, Pure Ratio1: 10.3039, Pure Ratio2 10.3627
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [167/250] Test Accuracy on the 10000 test images: Model1 34.4651 % Model2 34.4451 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [168/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.1562, Loss1: 0.0003, Loss2: 0.0008, Pure Ratio1: 10.0196, Pure Ratio2 10.1569
+Epoch [168/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 9.9706, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [168/250] Test Accuracy on the 10000 test images: Model1 34.9659 % Model2 35.0461 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.2138 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [169/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.0000, Pure Ratio2 9.9412
+Epoch [169/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2059, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [169/250] Test Accuracy on the 10000 test images: Model1 35.2464 % Model2 35.2965 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [170/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.4706, Pure Ratio2 10.1569
+Epoch [170/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 93.7500, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0490, Pure Ratio2 9.9020
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [170/250] Test Accuracy on the 10000 test images: Model1 34.6154 % Model2 34.0645 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [171/250], Iter [50/122] Training Accuracy1: 92.1875, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1373, Pure Ratio2 10.0980
+Epoch [171/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1471, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [171/250] Test Accuracy on the 10000 test images: Model1 34.7756 % Model2 34.6655 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 9.9887 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [172/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.6667, Pure Ratio2 9.8627
+Epoch [172/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.9118, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [172/250] Test Accuracy on the 10000 test images: Model1 35.1162 % Model2 35.0962 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.1414 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [173/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8235, Pure Ratio2 9.7451
+Epoch [173/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 91.4062, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.4314, Pure Ratio2 10.3333
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [173/250] Test Accuracy on the 10000 test images: Model1 34.6254 % Model2 34.7857 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [174/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.8039, Pure Ratio2 10.6667
+Epoch [174/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.8125, Loss1: 0.0001, Loss2: 0.0003, Pure Ratio1: 10.2255, Pure Ratio2 10.2255
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [174/250] Test Accuracy on the 10000 test images: Model1 34.6254 % Model2 34.4151 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [175/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2353, Pure Ratio2 10.2745
+Epoch [175/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1275, Pure Ratio2 10.2843
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [175/250] Test Accuracy on the 10000 test images: Model1 34.6755 % Model2 34.6454 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.1736 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [176/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 84.3750, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 11.0196, Pure Ratio2 10.8824
+Epoch [176/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.4804, Pure Ratio2 10.4118
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [176/250] Test Accuracy on the 10000 test images: Model1 34.5152 % Model2 34.6454 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [177/250], Iter [50/122] Training Accuracy1: 78.9062, Training Accuracy2: 79.6875, Loss1: 0.0006, Loss2: 0.0003, Pure Ratio1: 10.5098, Pure Ratio2 10.4902
+Epoch [177/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [177/250] Test Accuracy on the 10000 test images: Model1 34.7055 % Model2 34.0745 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [178/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.0625, Loss1: 0.0010, Loss2: 0.0001, Pure Ratio1: 9.8824, Pure Ratio2 9.9020
+Epoch [178/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 9.9608, Pure Ratio2 10.0294
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [178/250] Test Accuracy on the 10000 test images: Model1 34.9559 % Model2 34.6554 %, Pure Ratio 1 10.0450 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [179/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0000, Loss2: 0.0003, Pure Ratio1: 10.0196, Pure Ratio2 9.9020
+Epoch [179/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.1562, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2255, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [179/250] Test Accuracy on the 10000 test images: Model1 34.9259 % Model2 34.4952 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [180/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.6471, Pure Ratio2 10.5098
+Epoch [180/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.4902, Pure Ratio2 10.3137
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [180/250] Test Accuracy on the 10000 test images: Model1 34.7356 % Model2 34.5052 %, Pure Ratio 1 10.2620 %, Pure Ratio 2 10.0450 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [181/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.2745, Pure Ratio2 10.3922
+Epoch [181/250], Iter [100/122] Training Accuracy1: 92.9688, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.2647, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [181/250] Test Accuracy on the 10000 test images: Model1 34.8858 % Model2 34.4651 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [182/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 82.8125, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.0784, Pure Ratio2 10.0588
+Epoch [182/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2647, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [182/250] Test Accuracy on the 10000 test images: Model1 34.4351 % Model2 34.2047 %, Pure Ratio 1 10.2218 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [183/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0980, Pure Ratio2 9.9804
+Epoch [183/250], Iter [100/122] Training Accuracy1: 92.1875, Training Accuracy2: 93.7500, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.0882, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [183/250] Test Accuracy on the 10000 test images: Model1 34.3450 % Model2 34.8157 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1816 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [184/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.6275, Pure Ratio2 9.7059
+Epoch [184/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 9.9706, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [184/250] Test Accuracy on the 10000 test images: Model1 33.9343 % Model2 33.4435 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.2459 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [185/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 84.3750, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0196, Pure Ratio2 10.1176
+Epoch [185/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 9.9412, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [185/250] Test Accuracy on the 10000 test images: Model1 34.7356 % Model2 34.6955 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1414 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [186/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8235, Pure Ratio2 9.9412
+Epoch [186/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0294, Pure Ratio2 9.9412
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [186/250] Test Accuracy on the 10000 test images: Model1 34.8458 % Model2 34.7055 %, Pure Ratio 1 10.2861 %, Pure Ratio 2 10.2298 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [187/250], Iter [50/122] Training Accuracy1: 94.5312, Training Accuracy2: 94.5312, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9412, Pure Ratio2 9.7451
+Epoch [187/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 9.5784, Pure Ratio2 9.4412
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [187/250] Test Accuracy on the 10000 test images: Model1 35.0060 % Model2 34.9960 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 9.9968 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [188/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8039, Pure Ratio2 9.7451
+Epoch [188/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8725, Pure Ratio2 9.9510
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [188/250] Test Accuracy on the 10000 test images: Model1 35.1262 % Model2 35.0361 %, Pure Ratio 1 10.0370 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [189/250], Iter [50/122] Training Accuracy1: 84.3750, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 10.0392
+Epoch [189/250], Iter [100/122] Training Accuracy1: 95.3125, Training Accuracy2: 94.5312, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9706, Pure Ratio2 10.0392
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [189/250] Test Accuracy on the 10000 test images: Model1 35.1963 % Model2 34.9760 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [190/250], Iter [50/122] Training Accuracy1: 82.8125, Training Accuracy2: 81.2500, Loss1: 0.0000, Loss2: 0.0003, Pure Ratio1: 10.0980, Pure Ratio2 10.1569
+Epoch [190/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0686, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [190/250] Test Accuracy on the 10000 test images: Model1 34.9760 % Model2 34.7656 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.2298 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [191/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 82.0312, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.0784, Pure Ratio2 10.0784
+Epoch [191/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1471, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [191/250] Test Accuracy on the 10000 test images: Model1 34.6354 % Model2 34.5553 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [192/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 83.5938, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.0196, Pure Ratio2 10.1176
+Epoch [192/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 10.2059
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [192/250] Test Accuracy on the 10000 test images: Model1 35.3065 % Model2 35.4667 %, Pure Ratio 1 10.0611 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [193/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 91.4062, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.5490, Pure Ratio2 10.4118
+Epoch [193/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.4510, Pure Ratio2 10.4020
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [193/250] Test Accuracy on the 10000 test images: Model1 34.3149 % Model2 34.5252 %, Pure Ratio 1 10.2138 %, Pure Ratio 2 10.1816 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [194/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 10.0000
+Epoch [194/250], Iter [100/122] Training Accuracy1: 80.4688, Training Accuracy2: 78.9062, Loss1: 0.0002, Loss2: 0.0006, Pure Ratio1: 10.2157, Pure Ratio2 10.0882
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [194/250] Test Accuracy on the 10000 test images: Model1 34.9159 % Model2 34.8958 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.0771 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [195/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 90.6250, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2353, Pure Ratio2 10.0784
+Epoch [195/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 82.8125, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.1863, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [195/250] Test Accuracy on the 10000 test images: Model1 34.6354 % Model2 35.0861 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [196/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3922, Pure Ratio2 10.3137
+Epoch [196/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3235, Pure Ratio2 10.2941
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [196/250] Test Accuracy on the 10000 test images: Model1 34.5753 % Model2 34.4151 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [197/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3529, Pure Ratio2 10.2941
+Epoch [197/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0392, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [197/250] Test Accuracy on the 10000 test images: Model1 34.9860 % Model2 34.9459 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [198/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.2941, Pure Ratio2 10.2549
+Epoch [198/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 84.3750, Loss1: 0.0003, Loss2: 0.0001, Pure Ratio1: 10.1569, Pure Ratio2 10.1078
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [198/250] Test Accuracy on the 10000 test images: Model1 34.7756 % Model2 34.6554 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [199/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 84.3750, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 9.9804
+Epoch [199/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.9314, Pure Ratio2 9.8824
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [199/250] Test Accuracy on the 10000 test images: Model1 34.8758 % Model2 35.3065 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [200/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8235, Pure Ratio2 9.9608
+Epoch [200/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.1562, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1569, Pure Ratio2 10.2451
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [200/250] Test Accuracy on the 10000 test images: Model1 34.6154 % Model2 34.6955 %, Pure Ratio 1 10.0048 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [201/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3922, Pure Ratio2 10.2549
+Epoch [201/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.9375, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.1275
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [201/250] Test Accuracy on the 10000 test images: Model1 34.5353 % Model2 34.9559 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [202/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 82.0312, Loss1: 0.0002, Loss2: 0.0007, Pure Ratio1: 10.0392, Pure Ratio2 9.9216
+Epoch [202/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1176, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [202/250] Test Accuracy on the 10000 test images: Model1 34.7957 % Model2 34.9559 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [203/250], Iter [50/122] Training Accuracy1: 85.9375, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8824, Pure Ratio2 9.7843
+Epoch [203/250], Iter [100/122] Training Accuracy1: 92.1875, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2549, Pure Ratio2 10.2157
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [203/250] Test Accuracy on the 10000 test images: Model1 34.5353 % Model2 34.6755 %, Pure Ratio 1 10.2459 %, Pure Ratio 2 10.1896 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [204/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.5686, Pure Ratio2 10.4314
+Epoch [204/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 90.6250, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.3824, Pure Ratio2 10.3922
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [204/250] Test Accuracy on the 10000 test images: Model1 34.3650 % Model2 34.8157 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.1977 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [205/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.2549, Pure Ratio2 10.1176
+Epoch [205/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [205/250] Test Accuracy on the 10000 test images: Model1 34.9559 % Model2 34.8758 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [206/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 90.6250, Loss1: 0.0003, Loss2: 0.0000, Pure Ratio1: 9.8039, Pure Ratio2 10.0392
+Epoch [206/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1078, Pure Ratio2 10.1275
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [206/250] Test Accuracy on the 10000 test images: Model1 34.7656 % Model2 34.3349 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.2138 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [207/250], Iter [50/122] Training Accuracy1: 93.7500, Training Accuracy2: 94.5312, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.6275, Pure Ratio2 10.5490
+Epoch [207/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.2549, Pure Ratio2 10.2941
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [207/250] Test Accuracy on the 10000 test images: Model1 34.6955 % Model2 34.8057 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [208/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2549, Pure Ratio2 10.2549
+Epoch [208/250], Iter [100/122] Training Accuracy1: 92.1875, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1471, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [208/250] Test Accuracy on the 10000 test images: Model1 34.5753 % Model2 34.9860 %, Pure Ratio 1 10.0691 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [209/250], Iter [50/122] Training Accuracy1: 94.5312, Training Accuracy2: 92.9688, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2353, Pure Ratio2 10.1765
+Epoch [209/250], Iter [100/122] Training Accuracy1: 92.9688, Training Accuracy2: 93.7500, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.1765
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [209/250] Test Accuracy on the 10000 test images: Model1 35.0861 % Model2 35.1262 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [210/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.1562, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 10.0980, Pure Ratio2 10.0000
+Epoch [210/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 82.8125, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1667, Pure Ratio2 10.0784
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [210/250] Test Accuracy on the 10000 test images: Model1 34.3049 % Model2 34.8958 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [211/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.5098, Pure Ratio2 10.5294
+Epoch [211/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 83.5938, Loss1: 0.0003, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.1765
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [211/250] Test Accuracy on the 10000 test images: Model1 34.7256 % Model2 34.4151 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [212/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.5294, Pure Ratio2 10.1765
+Epoch [212/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.0294
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [212/250] Test Accuracy on the 10000 test images: Model1 34.8157 % Model2 34.8858 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.0289 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [213/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.2353
+Epoch [213/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 81.2500, Loss1: 0.0001, Loss2: 0.0002, Pure Ratio1: 10.1765, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [213/250] Test Accuracy on the 10000 test images: Model1 34.3450 % Model2 34.1346 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.1896 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [214/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3725, Pure Ratio2 10.3529
+Epoch [214/250], Iter [100/122] Training Accuracy1: 82.0312, Training Accuracy2: 82.8125, Loss1: 0.0002, Loss2: 0.0002, Pure Ratio1: 10.2451, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [214/250] Test Accuracy on the 10000 test images: Model1 34.5152 % Model2 34.5553 %, Pure Ratio 1 10.1495 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [215/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 88.2812, Loss1: 0.0004, Loss2: 0.0000, Pure Ratio1: 10.7647, Pure Ratio2 10.6863
+Epoch [215/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3333, Pure Ratio2 10.2843
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [215/250] Test Accuracy on the 10000 test images: Model1 34.8257 % Model2 34.4151 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [216/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.4118, Pure Ratio2 10.3137
+Epoch [216/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.1863
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [216/250] Test Accuracy on the 10000 test images: Model1 34.4351 % Model2 34.5453 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [217/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.4510, Pure Ratio2 9.5098
+Epoch [217/250], Iter [100/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9706, Pure Ratio2 10.1667
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [217/250] Test Accuracy on the 10000 test images: Model1 35.3666 % Model2 34.3950 %, Pure Ratio 1 9.9807 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [218/250], Iter [50/122] Training Accuracy1: 92.9688, Training Accuracy2: 93.7500, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.7451, Pure Ratio2 10.8235
+Epoch [218/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3922, Pure Ratio2 10.5000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [218/250] Test Accuracy on the 10000 test images: Model1 34.3149 % Model2 34.5653 %, Pure Ratio 1 10.1977 %, Pure Ratio 2 10.2379 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [219/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1765, Pure Ratio2 10.0196
+Epoch [219/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 83.5938, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1471, Pure Ratio2 10.0196
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [219/250] Test Accuracy on the 10000 test images: Model1 34.3249 % Model2 34.4651 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [220/250], Iter [50/122] Training Accuracy1: 83.5938, Training Accuracy2: 84.3750, Loss1: 0.0005, Loss2: 0.0007, Pure Ratio1: 10.3137, Pure Ratio2 10.3529
+Epoch [220/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 82.0312, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.1863, Pure Ratio2 10.1569
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [220/250] Test Accuracy on the 10000 test images: Model1 34.8458 % Model2 34.6755 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0852 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [221/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.4118, Pure Ratio2 9.3529
+Epoch [221/250], Iter [100/122] Training Accuracy1: 92.9688, Training Accuracy2: 92.9688, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.0588
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [221/250] Test Accuracy on the 10000 test images: Model1 35.2764 % Model2 34.6154 %, Pure Ratio 1 10.0771 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [222/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 86.7188, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.2157
+Epoch [222/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9118, Pure Ratio2 9.9314
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [222/250] Test Accuracy on the 10000 test images: Model1 34.7756 % Model2 34.5453 %, Pure Ratio 1 10.0209 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [223/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9020, Pure Ratio2 9.8627
+Epoch [223/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0392, Pure Ratio2 10.0882
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [223/250] Test Accuracy on the 10000 test images: Model1 34.4651 % Model2 34.7857 %, Pure Ratio 1 10.1093 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [224/250], Iter [50/122] Training Accuracy1: 92.1875, Training Accuracy2: 91.4062, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.4314, Pure Ratio2 10.3333
+Epoch [224/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1569, Pure Ratio2 9.9902
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [224/250] Test Accuracy on the 10000 test images: Model1 34.4952 % Model2 34.6254 %, Pure Ratio 1 10.1575 %, Pure Ratio 2 9.9807 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [225/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 9.8039, Pure Ratio2 9.7843
+Epoch [225/250], Iter [100/122] Training Accuracy1: 83.5938, Training Accuracy2: 82.8125, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0686, Pure Ratio2 9.9608
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [225/250] Test Accuracy on the 10000 test images: Model1 35.3966 % Model2 35.2063 %, Pure Ratio 1 10.2298 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [226/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.7647, Pure Ratio2 9.7451
+Epoch [226/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1569, Pure Ratio2 10.1471
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [226/250] Test Accuracy on the 10000 test images: Model1 35.0060 % Model2 35.0561 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.1575 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [227/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1373, Pure Ratio2 10.2353
+Epoch [227/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1765, Pure Ratio2 10.2451
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [227/250] Test Accuracy on the 10000 test images: Model1 34.6955 % Model2 34.9760 %, Pure Ratio 1 10.1173 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [228/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.5686, Pure Ratio2 9.6078
+Epoch [228/250], Iter [100/122] Training Accuracy1: 82.8125, Training Accuracy2: 83.5938, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.0294, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [228/250] Test Accuracy on the 10000 test images: Model1 34.6955 % Model2 35.1462 %, Pure Ratio 1 10.1655 %, Pure Ratio 2 10.1495 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [229/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.0000, Pure Ratio2 9.7647
+Epoch [229/250], Iter [100/122] Training Accuracy1: 84.3750, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1667, Pure Ratio2 10.0294
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [229/250] Test Accuracy on the 10000 test images: Model1 35.3365 % Model2 35.2564 %, Pure Ratio 1 10.1896 %, Pure Ratio 2 10.0691 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [230/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.8627, Pure Ratio2 10.7451
+Epoch [230/250], Iter [100/122] Training Accuracy1: 88.2812, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3333, Pure Ratio2 10.2647
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [230/250] Test Accuracy on the 10000 test images: Model1 34.9259 % Model2 35.0160 %, Pure Ratio 1 10.2218 %, Pure Ratio 2 10.1736 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [231/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.5686, Pure Ratio2 10.4118
+Epoch [231/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 10.2843, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [231/250] Test Accuracy on the 10000 test images: Model1 34.7556 % Model2 35.1062 %, Pure Ratio 1 10.2459 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [232/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3333, Pure Ratio2 10.1569
+Epoch [232/250], Iter [100/122] Training Accuracy1: 90.6250, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.0000
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [232/250] Test Accuracy on the 10000 test images: Model1 34.8057 % Model2 34.7756 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [233/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 87.5000, Loss1: 0.0004, Loss2: 0.0000, Pure Ratio1: 10.6863, Pure Ratio2 10.6275
+Epoch [233/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1667, Pure Ratio2 9.9706
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [233/250] Test Accuracy on the 10000 test images: Model1 35.0761 % Model2 34.9058 %, Pure Ratio 1 10.2138 %, Pure Ratio 2 10.0530 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [234/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.4118, Pure Ratio2 9.4902
+Epoch [234/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [234/250] Test Accuracy on the 10000 test images: Model1 34.8958 % Model2 35.0361 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [235/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1961, Pure Ratio2 10.1373
+Epoch [235/250], Iter [100/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0980, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [235/250] Test Accuracy on the 10000 test images: Model1 34.7456 % Model2 34.9960 %, Pure Ratio 1 10.2298 %, Pure Ratio 2 10.1334 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [236/250], Iter [50/122] Training Accuracy1: 80.4688, Training Accuracy2: 82.0312, Loss1: 0.0007, Loss2: 0.0001, Pure Ratio1: 9.9020, Pure Ratio2 9.7843
+Epoch [236/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0002, Pure Ratio1: 10.2255, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [236/250] Test Accuracy on the 10000 test images: Model1 34.9058 % Model2 35.0461 %, Pure Ratio 1 10.2138 %, Pure Ratio 2 10.1254 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [237/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.1562, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3725, Pure Ratio2 10.4902
+Epoch [237/250], Iter [100/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.1562, Loss1: 0.0001, Loss2: 0.0001, Pure Ratio1: 10.2157, Pure Ratio2 10.1961
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [237/250] Test Accuracy on the 10000 test images: Model1 35.0160 % Model2 34.7556 %, Pure Ratio 1 10.2057 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [238/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0001, Pure Ratio1: 9.8627, Pure Ratio2 9.8431
+Epoch [238/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 90.6250, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 9.9314, Pure Ratio2 9.9216
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [238/250] Test Accuracy on the 10000 test images: Model1 35.0761 % Model2 35.1262 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [239/250], Iter [50/122] Training Accuracy1: 89.0625, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0003, Pure Ratio1: 10.7255, Pure Ratio2 10.6471
+Epoch [239/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3039, Pure Ratio2 10.2843
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [239/250] Test Accuracy on the 10000 test images: Model1 34.7256 % Model2 35.0661 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0611 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [240/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3333, Pure Ratio2 10.3725
+Epoch [240/250], Iter [100/122] Training Accuracy1: 85.9375, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0980, Pure Ratio2 10.1373
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [240/250] Test Accuracy on the 10000 test images: Model1 35.1863 % Model2 34.9860 %, Pure Ratio 1 10.1013 %, Pure Ratio 2 10.1013 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [241/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.2549
+Epoch [241/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.4706, Pure Ratio2 10.4608
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [241/250] Test Accuracy on the 10000 test images: Model1 35.0561 % Model2 34.9159 %, Pure Ratio 1 10.2539 %, Pure Ratio 2 10.2620 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [242/250], Iter [50/122] Training Accuracy1: 89.8438, Training Accuracy2: 89.8438, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.6863, Pure Ratio2 10.6275
+Epoch [242/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 89.0625, Loss1: 0.0001, Loss2: 0.0000, Pure Ratio1: 10.2647, Pure Ratio2 10.2157
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [242/250] Test Accuracy on the 10000 test images: Model1 34.9559 % Model2 35.0260 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 10.1093 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [243/250], Iter [50/122] Training Accuracy1: 86.7188, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.5882, Pure Ratio2 10.5098
+Epoch [243/250], Iter [100/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 10.2157, Pure Ratio2 10.1765
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [243/250] Test Accuracy on the 10000 test images: Model1 35.0461 % Model2 35.0561 %, Pure Ratio 1 10.1414 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [244/250], Iter [50/122] Training Accuracy1: 92.9688, Training Accuracy2: 91.4062, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1961, Pure Ratio2 10.1765
+Epoch [244/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 90.6250, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.0588, Pure Ratio2 10.0686
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [244/250] Test Accuracy on the 10000 test images: Model1 35.0962 % Model2 34.9058 %, Pure Ratio 1 10.1254 %, Pure Ratio 2 10.1655 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [245/250], Iter [50/122] Training Accuracy1: 91.4062, Training Accuracy2: 92.9688, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.3529
+Epoch [245/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2353, Pure Ratio2 10.2549
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [245/250] Test Accuracy on the 10000 test images: Model1 34.7756 % Model2 34.8858 %, Pure Ratio 1 10.1334 %, Pure Ratio 2 10.1977 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [246/250], Iter [50/122] Training Accuracy1: 85.1562, Training Accuracy2: 85.9375, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3922, Pure Ratio2 10.3333
+Epoch [246/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.3333, Pure Ratio2 10.2941
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [246/250] Test Accuracy on the 10000 test images: Model1 34.7756 % Model2 35.2664 %, Pure Ratio 1 10.2941 %, Pure Ratio 2 10.2620 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [247/250], Iter [50/122] Training Accuracy1: 92.1875, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8431, Pure Ratio2 9.6275
+Epoch [247/250], Iter [100/122] Training Accuracy1: 81.2500, Training Accuracy2: 82.8125, Loss1: 0.0002, Loss2: 0.0000, Pure Ratio1: 10.0196, Pure Ratio2 10.0098
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [247/250] Test Accuracy on the 10000 test images: Model1 34.9760 % Model2 35.2464 %, Pure Ratio 1 10.0852 %, Pure Ratio 2 10.0370 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [248/250], Iter [50/122] Training Accuracy1: 87.5000, Training Accuracy2: 87.5000, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9412, Pure Ratio2 9.9216
+Epoch [248/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.2745, Pure Ratio2 10.1176
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [248/250] Test Accuracy on the 10000 test images: Model1 34.7356 % Model2 34.8357 %, Pure Ratio 1 10.1816 %, Pure Ratio 2 10.0932 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [249/250], Iter [50/122] Training Accuracy1: 90.6250, Training Accuracy2: 92.1875, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9804, Pure Ratio2 9.9804
+Epoch [249/250], Iter [100/122] Training Accuracy1: 89.0625, Training Accuracy2: 89.0625, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.8627, Pure Ratio2 9.8922
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [249/250] Test Accuracy on the 10000 test images: Model1 34.9860 % Model2 34.9760 %, Pure Ratio 1 10.0932 %, Pure Ratio 2 10.1173 %
+('Training', 'cifar10_coteaching_from_file_0.2')
+Epoch [250/250], Iter [50/122] Training Accuracy1: 88.2812, Training Accuracy2: 88.2812, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 10.1373, Pure Ratio2 10.1373
+Epoch [250/250], Iter [100/122] Training Accuracy1: 86.7188, Training Accuracy2: 86.7188, Loss1: 0.0000, Loss2: 0.0000, Pure Ratio1: 9.9020, Pure Ratio2 10.0686
+Evaluating cifar10_coteaching_from_file_0.2...
+Epoch [250/250] Test Accuracy on the 10000 test images: Model1 34.8958 % Model2 35.0461 %, Pure Ratio 1 10.0289 %, Pure Ratio 2 10.1575 %
+
+real	60m44.589s
+user	69m20.796s
+sys	19m37.811s

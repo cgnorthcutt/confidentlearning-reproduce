@@ -2,6 +2,8 @@
 
 This folder contains the noisy labels using in the cifar-10 expeirments for confident learning as well as the noise matrices used to generate the noisy labels.
 
+In these files `frac_zero_noise_rates` is the same thing as `sparsity`, as it is referred to in the [confident learning paper](https://www.jair.org/index.php/jair/article/view/12125).
+
 ## How to load the noisy labels
 
 The noisy labels are stored as json files. As an example, to load a json file:
